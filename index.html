@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lancer Autonomous Robotics Club (LARC) | University of Windsor</title>
+  <meta name="description" content="Lancer Autonomous Robotics Club at the University of Windsor. Student drone team focused on autonomous flight, reinforcement learning, ROS 2 and Gazebo simulation. AEAC and RoboSub." />
+  <link rel="icon" type="image/png" href="assets/larc-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
+</head>
+<body>
+  <div class="util-bar">
+    <div class="container">
+      <span>University of Windsor &nbsp;•&nbsp; Faculty of Engineering</span>
+      <span>UWSA + Engineering Society Ratified 2026–2027 &nbsp; <a href="members.html">Member Directory →</a></span>
+    </div>
+  </div>
+
+  <header id="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="assets/larc-logo.png" alt="LARC logo" />
+        <span class="brand-text"><strong>Lancer Autonomous Robotics Club</strong><small>UNIVERSITY OF WINDSOR • EST. 2026</small></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="members.html" class="active">Members</a></li>
+        <li><a href="#simulation">Simulation</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="members.html#join" class="btn btn-gold btn-sm">Join LARC</a></li>
+      </ul>
+      <button id="menu-btn" aria-label="Menu" aria-expanded="false">Menu</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-badge">50+ founding members • Open to all UWindsor students</span>
+          <h1>Student-built autonomous drones for real missions.</h1>
+          <p class="lede">LARC is a University of Windsor engineering club. We design, simulate and fly autonomous quadcopters — including <strong>drone control with reinforcement learning</strong> — to compete in the AEAC Student UAS Competition and RoboSub.</p>
+          <div class="hero-cta">
+            <a href="members.html" class="btn btn-navy">View Members</a>
+            <a href="#research" class="btn btn-outline">Drone + Reinforcement Learning</a>
+          </div>
+          <div class="hero-facts">
+            <div><b>50+</b><span>Members</span></div>
+            <div><b>5</b><span>Subteams</span></div>
+            <div><b>15 pg</b><span>Design Proposal</span></div>
+            <div><b>2027</b><span>AEAC Target</span></div>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/hero-cinematic.jpg" alt="LARC autonomous drone in flight" />
+          <figcaption>Year 1 focus: Gazebo digital twin + Phase 1 Technical Design Proposal. Flight testing in Year 2.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="split">
+        <div>
+          <p class="kicker">About LARC</p>
+          <h2>Practical robotics experience, from first year to graduate school.</h2>
+          <p class="muted">LARC gives Mechatronics and related disciplines hands-on experience in robotics, systems integration and aerial vehicle design. Our objective is to represent the University of Windsor at international autonomous competitions.</p>
+          <ul class="check-list">
+            <li><strong>No experience required.</strong> Tasks scale beginner → advanced. Buddy Pods of 3–5 students.</li>
+            <li><strong>Monthly general meetings,</strong> weekly subteam standups. Term Sept 1 – Aug 31.</li>
+            <li><strong>Inclusive membership.</strong> Open to all UWindsor undergraduates and graduates, per UWSA policy.</li>
+          </ul>
+          <p><img src="assets/uwindsor.svg" alt="University of Windsor" style="height:54px;width:auto;margin-top:12px" /></p>
+          <p class="fine">Official UWindsor / UWSA / LARC crest use requires written Executive Board sign-off. Placeholder lockup shown above.</p>
+        </div>
+        <div class="card">
+          <img src="assets/team-cinematic.jpg" alt="LARC students with drone" style="border-radius:8px" />
+          <h3 style="margin-top:14px">Year 1 — Foundation year</h3>
+          <p class="muted">Non-competition year while workshop, hardware and funding are secured. Two deliverables:</p>
+          <ol class="muted">
+            <li><strong>Phase 1 Technical Design Proposal</strong> (≤15 pages, WARG format)</li>
+            <li><strong>Physics-based digital twin</strong> — autonomous quadcopter in Gazebo</li>
+          </ol>
+          <p><span class="tag">Wk 3 — Setup</span> <span class="tag">Wk 6 — Schematics + Sim</span> <span class="tag">Wk 10 — Waypoints + Safety</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH / RL -->
+    <section id="research" class="section section-alt">
+      <div class="container">
+        <p class="kicker">Research focus</p>
+        <h2>Drones + reinforcement learning for autonomous flight</h2>
+        <p class="muted" style="max-width:760px">Alongside classical PID and ArduPilot, LARC maintains a reinforcement-learning track for drone control. Students train policies in simulation first, then transfer to the physical aircraft in Year 2.</p>
+        <div class="grid-3" style="margin-top:20px">
+          <div class="card">
+            <h3>1. Learn in simulation</h3>
+            <p class="muted">Gazebo + ROS 2 + Gym interface. PPO for hover, waypoint tracking and transect flight. Reward shaping for energy, stability and coverage.</p>
+            <p><span class="tag">PPO</span> <span class="tag">Gazebo</span> <span class="tag">ROS 2</span></p>
+          </div>
+          <div class="card">
+            <h3>2. Perceive the mission</h3>
+            <p class="muted">OpenCV wildlife counting, KML mapping and ground-station overlays. RL agents use visual + telemetry state for search and tagging.</p>
+            <p><span class="tag">OpenCV</span> <span class="tag">KML</span> <span class="tag">Raspberry Pi 5</span></p>
+          </div>
+          <div class="card">
+            <h3>3. Fly safely</h3>
+            <p class="muted">Safety-constrained RL, kill-switch override, airspace deconfliction and Transport Canada safety manual compliance.</p>
+            <p><span class="tag">ArduPilot</span> <span class="tag">MAVLink</span> <span class="tag">Safety</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section container">
+      <p class="kicker">Leadership</p>
+      <h2>Executive team and subteams</h2>
+      <p class="muted">Constitutional roles: Team Captain, Electrical Lead, Mechanical Lead, Controls &amp; Software Lead, Project Manager, Financial Manager, Pilot. Founding officers for 2026–2027 below. Full directory on the <a href="members.html">Members page</a>.</p>
+      <div class="member-grid">
+        <div class="member"><div class="avatar">LM</div><div><h3>Lucas Mark</h3><p>President / Team Captain</p></div></div>
+        <div class="member"><div class="avatar">AH</div><div><h3>Adam El Hajj</h3><p>Vice President</p></div></div>
+        <div class="member"><div class="avatar">LW</div><div><h3>Lukas Waller</h3><p>Financial Manager</p></div></div>
+        <div class="member"><div class="avatar">SA</div><div><h3>Dr. Shahpour Alirezaee</h3><p>Faculty Advisor*</p></div></div>
+        <div class="member"><div class="avatar">CN</div><div><h3>Cesar Nakhoul</h3><p>Financial Contact</p></div></div>
+        <div class="member"><div class="avatar">★</div><div><h3>Dave • Bruce • Calvin</h3><p>Technician Mentors</p></div></div>
+      </div>
+
+      <div class="grid-2" style="margin-top:18px">
+        <div class="card"><h3>Electrical &amp; Avionics</h3><p class="muted">PCBs, power budget, kill switch, wiring harness, lighting.</p></div>
+        <div class="card"><h3>Mechanical &amp; Airframe</h3><p class="muted">CAD airframe, balance analysis, sensor mounts, landing gear, wildlife tagger, ground sampler.</p></div>
+        <div class="card"><h3>Controls &amp; Autonomy — incl. RL</h3><p class="muted">ROS 2, Gazebo, ArduPilot, MAVLink, PID tuning + reinforcement-learning policies for waypoint and search tasks.</p></div>
+        <div class="card"><h3>Software &amp; Flight</h3><p class="muted">OpenCV counting, ground station, KML mapping, safety manual, Raspberry Pi 5, automated testing.</p></div>
+      </div>
+      <p class="fine" style="margin-top:12px">Business &amp; Admin (proposal, sponsorship, website, budget) supports all teams. *Advisor title to confirm.</p>
+    </section>
+
+    <!-- SIMULATION -->
+    <section id="simulation" class="section section-alt">
+      <div class="container split">
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src="assets/sim-hud.jpg" alt="Digital twin flight path" />
+          <div style="padding:18px"><strong>Digital twin — Gazebo</strong><p class="muted" style="margin:6px 0 0">Waypoint navigation, terrain mesh, herd-detection overlay.</p></div>
+        </div>
+        <div>
+          <p class="kicker">Simulation showcase</p>
+          <h2>One thousand simulated missions before one takeoff.</h2>
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="t1">ROS 2</button>
+            <button class="tab" data-tab="t2">Reinforcement Learning</button>
+            <button class="tab" data-tab="t3">Vision</button>
+            <button class="tab" data-tab="t4">Safety</button>
+          </div>
+          <p id="t1" class="tab-p active muted"><strong>ROS 2 autonomy stack.</strong> Mission planning, telemetry, deconfliction nodes. Built in Buddy Pods via Teams board tasks.</p>
+          <p id="t2" class="tab-p muted"><strong>RL training pipeline.</strong> PPO in Gazebo, domain randomisation (wind, mass, latency), sim-to-real checks before Year 2 flight.</p>
+          <p id="t3" class="tab-p muted"><strong>OpenCV + KML.</strong> Aerial wildlife counting and judge-ready map export from the ground station.</p>
+          <p id="t4" class="tab-p muted"><strong>Safety.</strong> Transport Canada manual, HITL testing on Raspberry Pi 5, CI automated tests.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITION -->
+    <section class="section container">
+      <div class="split">
+        <div>
+          <p class="kicker">Competitions</p>
+          <h2>AEAC 2027 wildlife mission. Then RoboSub.</h2>
+          <p class="muted"><strong>18th Annual AEAC Student UAS Competition</strong>, May 14–16, 2027, Medicine Hat, Alberta — wildlife surveying, tracking and tagging. LARC engineers to the same criteria in Year 1; physical build and flight in Year 2.</p>
+          <ul class="check-list">
+            <li>Autonomous takeoff → transect → tag → return-to-launch</li>
+            <li>Live telemetry + KML herd map</li>
+            <li>RL-assisted search patterns evaluated in sim</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src="assets/wildlife-mission.jpg" alt="Drone wildlife survey" />
+          <div style="padding:18px"><strong>Mission profile — prairie transect</strong><p class="muted" style="margin:6px 0 0">Campus showcases, sponsor nights and design reviews throughout the year.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="sponsors" class="section section-alt">
+      <div class="container">
+        <p class="kicker">Sponsors</p>
+        <h2>Support student engineering.</h2>
+        <p class="muted">Donations are tax-deductible via “University of Windsor Students’ Alliance (UWSA)”. Contacts: Lukas Waller &amp; Cesar Nakhoul.</p>
+        <div class="grid-4" style="margin-top:16px">
+          <div class="tier"><h3>Flight Support</h3><p class="price">$500</p><ul><li>Small logo on drone</li><li>Website + newsletter</li></ul></div>
+          <div class="tier"><h3>Altitude Achiever</h3><p class="price">$1,000</p><ul><li>Medium logo on drone</li><li>Apparel + banner</li></ul></div>
+          <div class="tier featured"><h3>10K FT</h3><p class="price">$2,500</p><ul><li>Large logo: drone, banner</li><li>Apparel + ground equipment</li></ul></div>
+          <div class="tier"><h3>Champion</h3><p class="price">$10,000</p><ul><li>18×24 poster, Industrial Courtyard</li><li>Photo ops + max placement</li></ul></div>
+        </div>
+        <p style="margin-top:16px"><a href="members.html#join" class="btn btn-navy">Become a sponsor</a> <span class="fine">Logo use requires Executive Board sign-off.</span></p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <div class="split">
+        <div>
+          <p class="kicker">Contact / Join</p>
+          <h2>Talk to the team.</h2>
+          <p class="muted">Membership, sponsorship, media or sim tours. Replies within 2–3 days during term.</p>
+          <p class="resume-note"><strong>We are accepting resumes.</strong> Attach your resume below for any subteam — including the drone reinforcement-learning track. PDF or DOC, max 5 MB.</p>
+          <p class="muted">Lancer Autonomous Robotics Club, University of Windsor, Windsor ON.<br />Ratified 2026–2027.</p>
+        </div>
+        <form id="contact-form" class="form" novalidate enctype="multipart/form-data">
+          <div class="form-row">
+            <div class="field"><label for="f-name">Full name <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" required placeholder="Your name" autocomplete="name" /></div>
+            <div class="field"><label for="f-email">UWindsor email <span class="req" aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" required placeholder="you@uwindsor.ca" autocomplete="email" /></div>
+          </div>
+          <div class="field"><label for="f-topic">Topic</label>
+            <select id="f-topic" name="interest">
+              <option>Joining a subteam</option>
+              <option>Reinforcement learning track</option>
+              <option>Sponsoring LARC</option>
+              <option>Media / collaboration</option>
+            </select>
+          </div>
+          <div class="field"><label id="resume-label" for="resume">Resume <span class="file-hint">— optional, PDF / DOC / DOCX, 5 MB max</span></label>
+            <div class="dropzone" id="dz" role="button" tabindex="0" aria-labelledby="resume-label">
+              <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-label="Upload resume" />
+              <div class="dz-icon" aria-hidden="true">📄</div>
+              <div class="dz-title">Drop your resume here or <u>browse files</u></div>
+              <div class="dz-sub">PDF, DOC, DOCX • 5 MB max • We are accepting resumes</div>
+            </div>
+            <div class="file-chip" id="chip"><span class="dot" aria-hidden="true"></span><span id="chip-name"></span><button type="button" id="chip-remove">Remove</button></div>
+          </div>
+          <div class="field"><label for="f-msg">Message <span class="req" aria-hidden="true">*</span></label><textarea id="f-msg" name="message" rows="4" required placeholder="Major, year, what you want to build…"></textarea></div>
+          <button class="btn btn-gold" type="submit">Send message</button>
+          <p id="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot-grid">
+      <div>
+        <img src="assets/larc-logo.png" alt="LARC" class="foot-logo" />
+        <p style="font-size:.9rem">Lancer Autonomous Robotics Club.<br />University of Windsor — Windsor, Ontario.</p>
+      </div>
+      <nav aria-label="Footer"><b>Explore</b><a href="#about">About</a><a href="#research">Reinforcement Learning</a><a href="members.html">Members</a><a href="#sponsors">Sponsors</a></nav>
+      <nav aria-label="Social"><b>Follow</b><a href="https://github.com/Lancer-Autonomous-Robotics-Club" target="_blank" rel="noopener">GitHub</a><a href="#contact">Discord</a><a href="#contact">Instagram</a><a href="#contact">LinkedIn</a></nav>
+      <div><b>Governance</b><p class="fine" style="color:#a9b6cc">Constitution ratified 2026–2027. Membership Sept 1–Aug 31. No discrimination per UWSA policy.</p></div>
+    </div>
+    <p class="legal">© <span id="year"></span> LARC, University of Windsor • Business &amp; Admin — Web Division</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
