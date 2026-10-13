@@ -6,7 +6,7 @@ Official website for the **Lancer Autonomous Robotics Club (LARC)** at the Unive
 
 ## 📁 Structure
 - `index.html` — Homepage
-- `members.html` — Members page
+
 - `assets/` — Images and media
 - `css/` — Stylesheets
 - `js/` — JavaScript
