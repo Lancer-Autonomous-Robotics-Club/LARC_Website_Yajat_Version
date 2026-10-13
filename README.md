@@ -2,7 +2,7 @@
 
 Official website for the **Lancer Autonomous Robotics Club (LARC)** at the University of Windsor — built by Yajat.
 
-🌐 **Live site:** [larc-peach.vercel.app](https://larc-peach.vercel.app)
+🌐 **Live site:** [larcwebsiteyajatversion-k7tfqmkhy-adam-elhajj.vercel.app](https://larcwebsiteyajatversion-k7tfqmkhy-adam-elhajj.vercel.app)
 
 ## 📁 Structure
 - `index.html` — Homepage
